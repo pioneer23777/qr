@@ -267,6 +267,8 @@ img { max-width: 100%; display: block; }
   background: var(--accent-soft);
   color: var(--accent-bright);
   text-transform: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .link-sub {
