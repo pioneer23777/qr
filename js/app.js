@@ -60,7 +60,7 @@
     if (!btn) return;
     var prev = btn.textContent;
     btn.classList.add("is-done");
-    btn.textContent = doneLabel || "복사됨 ✓";
+    btn.textContent = doneLabel || "Copied ✓";
     setTimeout(function () {
       btn.classList.remove("is-done");
       btn.textContent = prev;
@@ -69,12 +69,12 @@
 
   /* ----- render static chrome ----- */
   $$("[data-brand]").forEach(function (el) { el.textContent = data.name; });
-  $$("[data-tagline]").forEach(function (el) { el.textContent = data.tagline || "메뉴 & 공식 링크"; });
+  $$("[data-tagline]").forEach(function (el) { el.textContent = data.tagline || "Menu & Official Links"; });
 
   var menuCount = (data.menu && data.menu.length) || 0;
   var menuMeta = $("[data-menu-meta]");
   if (menuMeta) {
-    menuMeta.textContent = menuCount ? ("MENU · " + menuCount + "장") : "MENU · 준비 중";
+    menuMeta.textContent = menuCount ? (menuCount + " Photos") : "Coming Soon";
   }
 
   var linksRoot = $("#links");
@@ -95,7 +95,7 @@
             "</span>" +
           "</a>" +
           '<button type="button" class="copy-btn' + (pending ? " is-disabled" : "") + '"' +
-            (pending ? " disabled" : "") + ">" + (pending ? (link.badge || "준비 중") : "링크복사") + "</button>" +
+            (pending ? " disabled" : "") + ">" + (pending ? (link.badge || "Coming Soon") : "Copy Link") + "</button>" +
         "</article>"
       );
     }).join("");
@@ -121,12 +121,12 @@
       var link = data.links[Number(card.getAttribute("data-link-index"))];
       if (!link) return;
       if (!link.url || link.pending) {
-        toast(link.pendingToast || "주소는 곧 등록될 예정입니다");
+        toast(link.pendingToast || "This link will be added soon.");
         return;
       }
       copyText(link.url).then(function (ok) {
-        if (ok) { flashBtn(copyBtn); toast("링크가 복사되었습니다"); }
-        else toast("복사에 실패했습니다. 링크를 길게 눌러 복사해 주세요");
+        if (ok) { flashBtn(copyBtn); toast("Link copied!"); }
+        else toast("Couldn't copy. Please long-press the link to copy.");
       });
       return;
     }
@@ -136,7 +136,7 @@
       e.preventDefault();
       var card2 = main.closest(".link-card");
       var link2 = data.links[Number(card2.getAttribute("data-link-index"))];
-      toast((link2 && link2.pendingToast) || "주소는 곧 등록될 예정입니다");
+      toast((link2 && link2.pendingToast) || "This link will be added soon.");
     }
   });
 
@@ -144,8 +144,8 @@
   if (shareBtn) {
     shareBtn.addEventListener("click", function () {
       copyText(data.pageUrl).then(function (ok) {
-        if (ok) { flashBtn(shareBtn, "복사됨 ✓"); toast("이 페이지 링크가 복사되었습니다"); }
-        else toast("복사에 실패했습니다");
+        if (ok) { flashBtn(shareBtn, "Copied ✓"); toast("Page link copied!"); }
+        else toast("Couldn't copy the link.");
       });
     });
   }
@@ -176,7 +176,7 @@
     var items = data.menu || [];
     if (!items.length) {
       gallery.innerHTML =
-        '<div class="placeholder"><strong>메뉴사진 준비 중</strong>카페 메뉴사진은 곧 등록될 예정입니다.</div>';
+        '<div class="placeholder"><strong>Menu photos coming soon.</strong></div>';
       if (chips) chips.style.display = "none";
       return;
     }

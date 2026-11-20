@@ -1,7 +1,7 @@
 window.ZODIAC = {
   venue: "bar",
   name: "ZODIAC CLUB BAR",
-  tagline: "메뉴 & 공식 링크",
+  tagline: "Menu & Official Links",
   pageUrl: "https://pioneer23777.github.io/qr/bar/",
   menu: [
     { src: "menu/01-premium-combo.jpg", title: "PREMIUM COMBO", category: "combo" },
@@ -20,41 +20,41 @@ window.ZODIAC = {
     { src: "menu/14-desserts.jpg", title: "DESSERTS", category: "food" }
   ],
   categories: [
-    { id: "all", label: "전체" },
-    { id: "combo", label: "콤보" },
-    { id: "spirits", label: "주류" },
-    { id: "cocktail", label: "칵테일·음료" },
-    { id: "food", label: "푸드·디저트" }
+    { id: "all", label: "All" },
+    { id: "combo", label: "Combo" },
+    { id: "spirits", label: "Spirits & Wine" },
+    { id: "cocktail", label: "Cocktails & Drinks" },
+    { id: "food", label: "Food & Desserts" }
   ],
   links: [
     {
       id: "maps",
       icon: "maps",
-      title: "구글주소",
-      subtitle: "Google Maps · 길찾기",
+      title: "Google Maps",
+      subtitle: "Get directions",
       url: "https://maps.app.goo.gl/dN3UTJdWLB6K5jpz5"
     },
     {
       id: "facebook",
       icon: "facebook",
-      title: "페이스북주소",
-      subtitle: "준비 중",
+      title: "Facebook",
+      subtitle: "Coming Soon",
       url: "",
       pending: true,
-      badge: "준비 중",
-      pendingToast: "페이스북 주소는 곧 등록될 예정입니다"
+      badge: "Coming Soon",
+      pendingToast: "Facebook will be added soon."
     },
     {
       id: "instagram",
       icon: "instagram",
-      title: "인스타주소",
+      title: "Instagram",
       subtitle: "@zodiacbar_official",
       url: "https://www.instagram.com/zodiacbar_official/"
     },
     {
       id: "tiktok",
       icon: "tiktok",
-      title: "틱톡주소",
+      title: "TikTok",
       subtitle: "@zodiac.official2022",
       url: "https://www.tiktok.com/@zodiac.official2022?is_from_webapp=1&sender_device=pc"
     }

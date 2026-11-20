@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>MMS CAFE | 메뉴 & 공식 링크</title>
-  <meta name="description" content="MMS CAFE 메뉴판, 위치(구글맵), 틱톡 링크를 한눈에 확인하세요.">
+  <title>MMS CAFE | Menu & Official Links</title>
+  <meta name="description" content="View MMS CAFE menu, Google Maps, Facebook, Instagram, and TikTok links for Binh Thanh and Quận 9.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MMS CAFE | 메뉴 & 공식 링크">
-  <meta property="og:description" content="MMS CAFE 메뉴판, 위치(구글맵), 틱톡 링크를 한눈에 확인하세요.">
+  <meta property="og:title" content="MMS CAFE | Menu & Official Links">
+  <meta property="og:description" content="View MMS CAFE menu, Google Maps, Facebook, Instagram, and TikTok links for Binh Thanh and Quận 9.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MMS CAFE | 메뉴 & 공식 링크">
-  <meta name="twitter:description" content="MMS CAFE 메뉴판, 위치(구글맵), 틱톡 링크를 한눈에 확인하세요.">
+  <meta name="twitter:title" content="MMS CAFE | Menu & Official Links">
+  <meta name="twitter:description" content="View MMS CAFE menu, Google Maps, Facebook, Instagram, and TikTok links for Binh Thanh and Quận 9.">
   <meta name="theme-color" content="#1B1410">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,7 +30,7 @@
   <circle cx="24" cy="24" r="3.2" fill="currentColor"/>
 </svg>
       <h1 class="brand" data-brand></h1>
-      <p class="tagline" data-tagline>메뉴 & 공식 링크</p>
+      <p class="tagline" data-tagline>Menu & Official Links</p>
       <div class="hero-rule" aria-hidden="true"></div>
     </header>
 
@@ -40,17 +40,17 @@
   <circle cx="12" cy="12.2" r="3.2"/>
 </svg>
       <span class="label">
-        <span class="ko">메뉴사진</span>
+        <span class="ko">Menu</span>
         <span class="en" data-menu-meta>MENU</span>
       </span>
     </button>
 
-    <h2 class="section-label">공식 링크</h2>
+    <h2 class="section-label">Official Links</h2>
     <section class="links" id="links"></section>
 
     <section class="share">
-      <p>QR코드와 똑같이 동작하는 페이지 링크입니다. 복사해서 붙여넣기만 하면 됩니다.</p>
-      <button type="button" class="share-btn" id="share-copy">이 페이지 링크 복사</button>
+      <p>This is the same link as the QR code. Copy and share it anywhere.</p>
+      <button type="button" class="share-btn" id="share-copy">Copy Page Link</button>
       <p class="page-url" data-page-url></p>
     </section>
 
@@ -61,7 +61,7 @@
     <div class="modal-head">
       <div class="modal-row">
         <h2 class="modal-title" id="menu-title">MMS CAFE MENU</h2>
-        <button type="button" class="close-btn" id="close-menu" aria-label="닫기">✕</button>
+        <button type="button" class="close-btn" id="close-menu" aria-label="Close">✕</button>
       </div>
       <div class="chips" id="chips"></div>
     </div>
@@ -71,15 +71,15 @@
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
     <div class="lightbox-bar">
       <span id="lb-cap"></span>
-      <button type="button" class="close-btn" id="lb-close" aria-label="닫기">✕</button>
+      <button type="button" class="close-btn" id="lb-close" aria-label="Close">✕</button>
     </div>
     <div class="lightbox-stage" id="lb-stage">
-      <button type="button" class="lightbox-nav prev" id="lb-prev" aria-label="이전">‹</button>
+      <button type="button" class="lightbox-nav prev" id="lb-prev" aria-label="Previous">‹</button>
       <img id="lb-img" alt="">
-      <button type="button" class="lightbox-nav next" id="lb-next" aria-label="다음">›</button>
+      <button type="button" class="lightbox-nav next" id="lb-next" aria-label="Next">›</button>
     </div>
     <div class="lightbox-tools">
-      <button type="button" class="tool-btn" id="lb-zoom">확대 / 축소</button>
+      <button type="button" class="tool-btn" id="lb-zoom">Zoom</button>
     </div>
   </div>
 

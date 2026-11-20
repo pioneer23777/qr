@@ -45,11 +45,11 @@
     if (!btn) return;
     var url = btn.getAttribute("data-copy");
     copyText(url).then(function (ok) {
-      if (!ok) { toast("복사에 실패했습니다"); return; }
+      if (!ok) { toast("Couldn't copy the link."); return; }
       var prev = btn.textContent;
       btn.classList.add("is-done");
-      btn.textContent = "복사됨 ✓";
-      toast("링크가 복사되었습니다");
+      btn.textContent = "Copied ✓";
+      toast("Link copied!");
       setTimeout(function () {
         btn.classList.remove("is-done");
         btn.textContent = prev;
