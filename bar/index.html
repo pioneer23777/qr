@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ZODIAC CLUB BAR | 메뉴 & 공식 링크</title>
+  <meta name="description" content="ZODIAC CLUB BAR 메뉴판, 위치(구글맵), 인스타그램, 틱톡 링크를 한눈에 확인하세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ZODIAC CLUB BAR | 메뉴 & 공식 링크">
+  <meta property="og:description" content="ZODIAC CLUB BAR 메뉴판, 위치(구글맵), 인스타그램, 틱톡 링크를 한눈에 확인하세요.">
+  <meta property="og:image" content="https://pioneer23777.github.io/qr/bar/menu/01-premium-combo.jpg">
+  <meta name="twitter:image" content="https://pioneer23777.github.io/qr/bar/menu/01-premium-combo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZODIAC CLUB BAR | 메뉴 & 공식 링크">
+  <meta name="twitter:description" content="ZODIAC CLUB BAR 메뉴판, 위치(구글맵), 인스타그램, 틱톡 링크를 한눈에 확인하세요.">
+  <meta name="theme-color" content="#0B0B0F">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="theme-bar">
+  <div class="glow" aria-hidden="true"></div>
+  <main class="page">
+    <header class="hero">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="14.5" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M24 4l2.1 12.4L24 15.2l-2.1 1.2L24 4zm20 20-12.4 2.1L32.8 24l-1.2-2.1L44 24zM24 44l-2.1-12.4L24 32.8l2.1-1.2L24 44zM4 24l12.4-2.1L15.2 24l1.2 2.1L4 24z" fill="currentColor"/>
+  <circle cx="24" cy="24" r="3.2" fill="currentColor"/>
+</svg>
+      <h1 class="brand" data-brand></h1>
+      <p class="tagline" data-tagline>메뉴 & 공식 링크</p>
+      <div class="hero-rule" aria-hidden="true"></div>
+    </header>
+
+    <button type="button" class="menu-btn" id="menu-btn">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.2l1.2-2h6.2l1.2 2h1.2A2.5 2.5 0 0 1 20 8.5v8A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-8z"/>
+  <circle cx="12" cy="12.2" r="3.2"/>
+</svg>
+      <span class="label">
+        <span class="ko">메뉴사진</span>
+        <span class="en" data-menu-meta>MENU</span>
+      </span>
+    </button>
+
+    <h2 class="section-label">공식 링크</h2>
+    <section class="links" id="links"></section>
+
+    <section class="share">
+      <p>QR코드와 똑같이 동작하는 페이지 링크입니다. 복사해서 붙여넣기만 하면 됩니다.</p>
+      <button type="button" class="share-btn" id="share-copy">이 페이지 링크 복사</button>
+      <p class="page-url" data-page-url></p>
+    </section>
+
+    <p class="footer" data-brand></p>
+  </main>
+
+  <div class="modal" id="menu-modal" role="dialog" aria-modal="true" aria-labelledby="menu-title">
+    <div class="modal-head">
+      <div class="modal-row">
+        <h2 class="modal-title" id="menu-title">ZODIAC MENU</h2>
+        <button type="button" class="close-btn" id="close-menu" aria-label="닫기">✕</button>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-bar">
+      <span id="lb-cap"></span>
+      <button type="button" class="close-btn" id="lb-close" aria-label="닫기">✕</button>
+    </div>
+    <div class="lightbox-stage" id="lb-stage">
+      <button type="button" class="lightbox-nav prev" id="lb-prev" aria-label="이전">‹</button>
+      <img id="lb-img" alt="">
+      <button type="button" class="lightbox-nav next" id="lb-next" aria-label="다음">›</button>
+    </div>
+    <div class="lightbox-tools">
+      <button type="button" class="tool-btn" id="lb-zoom">확대 / 축소</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
