@@ -136,6 +136,55 @@ img { max-width: 100%; display: block; }
   border-radius: 2px;
 }
 
+.hero-backdrop { display: none; }
+
+body.theme-bar { position: relative; }
+
+.theme-bar .hero-backdrop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: min(46vh, 360px);
+  background: #0B0B0F url("../bar/assets/zodiac-vibe.jpg") center 38% / cover no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.theme-bar .hero-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(234, 98, 0, 0.22) 0%, transparent 42%),
+    linear-gradient(180deg, rgba(11, 11, 15, 0.22) 0%, rgba(11, 11, 15, 0.48) 50%, rgba(11, 11, 15, 0.9) 80%, #0B0B0F 100%);
+}
+
+.theme-bar .hero { padding-top: 56px; }
+
+.theme-bar .brand,
+.theme-bar .tagline {
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.7);
+}
+
+.brand-badge {
+  width: 168px;
+  margin: 0 auto 16px;
+  padding: 10px;
+  background: #FFFDF7;
+  border-radius: 28px;
+  border: 2px solid #F8C94C;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+.brand-badge img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
 .menu-btn {
   display: flex;
   align-items: center;
